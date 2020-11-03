@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+    
+.bluebox
+{background-color: #3A5795;color: white;height: auto;width:auto;}
+
+.yellowbox
+{background-color: rgb(222, 224, 85);height: auto;width: auto;}
+
+.greenbox
+{background-color: #31af37;height: auto;width: auto;}#great{background-color: #5a3479;}
+    
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="bluebox">
+<p>Facebook is <span id="great">great</span></p>
+
+<p class="orange">Paragraph2</p>
+
+<p>Paragraph3</p>
+
+</div>
+
+<div class="yellowbox">
+<p>Apple.</p>
+
+<ul>
+<li>BMW</li>
+<li>Audi</li>
+<li>Mercedes</li>
+</ul>
+
+<p><a href="http://www.google.com">This is a link</a></p>
+
+</div>
+
+<p>a paragraph</p>
+
+<div class="greenbox">
+
+<p>Microsoft.
+</p>
+<p>
+<a href="http://www.microsoft.com">This is another link</a>
+</p>
+
+<ul>
+<li>BMW</li>
+<li>Audi</li>
+<li>Mercedes</li>
+</ul>
+
+
+<table>
+<tr>
+<th>Phone Make</th>
+<th>Model</th>
+<th>Model</th>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>Iphone 4</td>
+<td>64Gb</td>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>Iphone 5</td>
+<td>16Gb</td>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>Iphone 6</td>
+<td>32Gb</td>
+</tr>
+
+<tr>
+
+<td>Apple</td>
+<td>Iphone 7</td>
+<td>32Gb</td>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>Iphone 9</td>
+<td>256Gb</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>Type your name:<input id="input"><button id = "submit" type="submit">Submit</button></p>
+
+<script>
+
+$(function(){
+    
+    
+$("*").css("font-size", '18px');
+//$("p").css("text-align","center");
+//$("div > p").css("text-align","center");
+//$("div ~ p").css("text-align","center");
+
+$("div  p").css("text-align","center");
+$("#great").css("background-color","#6acb57");
+$(".orange").css("background-color","orange");
+$("div .bluebox").css("font-family","sans-serif");
+$("p:first-child, p:last-child").css("text-decoration","underline");
+$("[href]").css("color","red");
+$("li:first-child, li:last-child").css("background-color","#d0e6ac");
+$("tr:even").css("background-color","#dedaad");
+$("tr:odd").css("background-color","#f0d9f4");
+$(":input").css("background-color","#cdded2");
+$(":Submit").css("background-color","#e6c2a8");    
+    
+//$("p").click(function(){
+
+//$("p").css("background-color", "white") ;
+    
+//$(this).css("background-color", "white") ;
+    
+//$("p").css("background-color", "white") ;
+
+
+$("p").mouseover(function(){
+
+    $(this).css('background-color', "black");
+
+}) ;
+    
+$("p").mouseout(function(){
+
+    $(this).css('background-color', "");
+
+}) ;
+
+$(":input").focus(function(){
+
+    $(this).css('background-color', "pink");
+
+}) ;
+    
+$(":input").blur(function(){
+
+    $(this).css('background-color', "yellow");
+
+}) ;
+
+$(":input").keyup(function(){
+
+    $(this).css('background-color', "silver");
+
+}) ;
+
+$("#submit").click(function(){
+    $("#input").css('background-color', "white");
+
+    $("#input").val("");
+
+}) ;
+
+}) ;
+
+</script>
+
+</body>
+</html>

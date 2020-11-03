@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<style>
+    
+  
+    .bluebox
+    {
+    color: white ;
+    background-color:blue ;
+    height: 100px ;
+    width: auto ;
+    text-indent:40px;
+    text-align:center ;
+  }
+    .yellowbox
+    {    
+    color : white ;
+    background-color:yellow ;
+    height: 100px ;
+    width: auto ;
+    }
+    .greenbox
+    {
+    color : white ;
+       background-color:green ;
+    height: 100px ;
+    width: auto ;
+    }
+    .great
+    {
+    color : orange ;
+    letter-spacing: 18px;
+  }
+    
+ </style>
+</head>
+<body>
+
+<div class = "bluebox" id="facebook">
+    <p> Facebook is <span class = "great">great.</span></p>
+</div>
+<div class = "yellowbox" id="apple">
+    <p> Apple</p>
+</div>
+<div class = "greenbox">
+    <p> Microsoft</p>
+</div>
+
+<button id="button1"> Change Facebook </button>
+<button id="button2"> Change Apple </button>
+
+<p id="app"> Start</p>
+<script>
+
+document.getElementById("app").innerHTML += "<br />" + 0 ;
+    
+for(i=7;i>0;i--)
+{
+  document.getElementById("app").innerHTML += "<br />" + Math.pow(i, 2) ;
+      
+}
+    
+var str = "Atlanta" ;
+var pattern = /a/i;
+window.alert(str.match(pattern)) ;
+    </script>
+</body>
+</html>
+
+
